@@ -182,7 +182,7 @@ def run(weights=ROOT / 'yolov5s.pt',  # model.pt path(s)
                         print('detected object name is ', object_name)
                         original_img = im0
                         cropped_img = im0[y1:y2, x1:x2]
-                        filename = 'runs/ae_detect/%d_%d_%d_%d_%s.png' % (x1, y1, x2, y2, object_name)
+                        filename = 'runs/ae_detect/%s_%f.png' % (object_name, conf)
                         cv2.imwrite(filename,cropped_img) ### >>>>>> to retain all cropped picture give different name for each pictures, else it will overwrite and only last image will be saved.
 
                         ####################################>>>>>>>>>> END of modified code <<<<<<<<<<<##########################
